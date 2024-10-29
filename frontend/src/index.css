@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Rajdhani","Orbitron", "Aldrich",  sans-serif; */
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+:root {
+  font-family: "Aldrich", "Orbitron", "Rajdhani" sans-serif;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+}
+
+
+
+
+
+
