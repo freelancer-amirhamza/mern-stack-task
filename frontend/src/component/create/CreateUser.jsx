@@ -28,38 +28,38 @@ import { createUser } from '../../api';
     <Navbar title={`All Users`} title1={`Back Home`} link={`/allUsers`} link1={`/`}/>
         {loading ? <><Loader/> </> : <>
         <div className="w-min h-auto bg-slate-700  border-2 border-blue-300 rounded-md hover:shadow-md  duration-300 hover:shadow-blue-300 items-center justify-center flex flex-col ">
-            <form action="" className='p-3 rounded-md flex flex-col items-center justify-center w-full h-full gap-3 '>
+        <form action="" className='p-3 rounded-md flex flex-col items-center justify-center w-full h-full gap-3 '>
                 <div className="font-semibold flex flex-col gap-1 w-full">
                     <label  htmlFor="name">Name</label>
-                    <input className=' bg-slate-800 sm:px-12 sm:py-3 py-2 px-3  rounded-sm focus:outline-2 focus:outline focus:outline-blue-300 ' type="text" name="name" id="name"
+                    <input className=' bg-slate-800 sm:w-full sm:py-3 py-2 px-3  rounded-sm focus:outline-2 focus:outline focus:outline-blue-300 ' type="text" name="name" id="name"
                     value={name}
                     onChange={e => setName(e.target.value)}
                     />
                 </div>
                 <div className="font-semibold flex flex-col gap-1 w-full ">
                     <label  htmlFor="imageUrl">Image</label>
-                    <input className='  bg-slate-800 sm:px-12 sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  '  type="text" name="imageUrl" id="imageUrl"
+                    <input className='  bg-slate-800  sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  '  type="text" name="imageUrl" id="imageUrl"
                     value={imageUrl}
                     onChange={e => setImageUrl(e.target.value)}
                     />
                 </div>
                 <div className="font-semibold flex flex-col gap-1 w-full ">
                     <label  htmlFor="email">Email</label>
-                    <input className='  bg-slate-800 sm:px-12 sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="email" name="email" id="email"
+                    <input className='  bg-slate-800  sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="email" name="email" id="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     />
                 </div>
                 <div className="font-semibold  flex flex-col gap-1 w-full">
                     <label  htmlFor="phone">Phone Number</label>
-                    <input className='  bg-slate-800 sm:px-12 sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="number" name="phone" id="phone"
+                    <input className='  bg-slate-800 sm:pr-20 nu sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="number" name="phone" id="phone"
                     value={phone}
                     onChange={e => setPhone(e.target.value)}
                     />
                 </div>
                 <div className="font-semibold  flex flex-col gap-1 w-full">
                     <label  htmlFor="address">Address</label>
-                    <input className='  bg-slate-800 sm:px-12 sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="text" name="address" id="address"
+                    <input className='  bg-slate-800 sm:py-3 py-2 px-3 rounded-sm focus:outline-2 focus:outline focus:outline-blue-300  ' type="text" name="address" id="address"
                     value={address}
                     onChange={e => setAddress(e.target.value)}
                     />
