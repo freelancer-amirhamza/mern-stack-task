@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const API = axios.create({
-    baseURL: "https://mern-stack-task-vsel.onrender.com",
+    baseURL: "https://mern-stack-task-project.onrender.com",
 })
 
 // get All users
