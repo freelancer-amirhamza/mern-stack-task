@@ -1,7 +1,7 @@
-import axios from 'axios';
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Loader from './Loader';
+import { deleteUser } from '../api';
 
 const UserCard = ({user, setUsers}) => {
     const navigate = useNavigate();
@@ -10,11 +10,11 @@ const UserCard = ({user, setUsers}) => {
 
     const handleDelete = async(id)=>{
       setLoading(true)
-      await axios.delete(`http://localhost:4000/deleteUser/${id}`)
-      .then(()=>{
-          setUsers((prevUser)=> prevUser.filter(user => user._id !== id))
-          navigate('/')
-      }).catch((err)=> console.log(err.message));
+      await deleteUser(id).then(()=>{
+        setUsers((prevUser)=> prevUser.filter(user => user._id !== id))
+        navigate('/')
+    }).catch((err)=> console.log(err.message));
+      
       setLoading(false);
   }
   return (

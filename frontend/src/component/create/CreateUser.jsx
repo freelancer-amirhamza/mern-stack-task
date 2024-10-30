@@ -1,8 +1,8 @@
-import axios from 'axios';
 import  { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Loader from '../Loader';
 import Navbar from '../Navbar';
+import { createUser } from '../../api';
 
  const CreateUser = () => {
     const [imageUrl, setImageUrl] = useState();
@@ -16,7 +16,7 @@ import Navbar from '../Navbar';
     const handleSubmit = async (e) =>{
         e.preventDefault()
         setLoading(true);
-        await axios.post("http://localhost:4000/createUser", {name, email, address, imageUrl, phone })
+        await createUser({name, email, address, imageUrl, phone })
         .then(()=> navigate("/allUsers"))
         .catch((err)=> console.log(err));
         setLoading(false)

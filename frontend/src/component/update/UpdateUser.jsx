@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import Loader from '../Loader';
 import Navbar from '../Navbar';
+import { getUserById, updateUser } from '../../api';
 
 const UpdateUser = () => {
     const {id} = useParams();
@@ -15,8 +16,7 @@ const UpdateUser = () => {
     const [loading,setLoading] = useState(false)
 
     useEffect(()=>{
-        axios.get("http://localhost:4000/getUsers/"+id)
-        .then((users)=>{
+         getUserById(id).then((users)=>{
             setName(users.data.name)
             setEmail(users.data.email)
             setPhone(users.data.phone)
@@ -28,7 +28,7 @@ const UpdateUser = () => {
     const handleUpdate = async (e)=>{
         setLoading(true)
         e.preventDefault()
-        await axios.put("http://localhost:4000/updateUser/"+id, {name, email, phone, imageUrl, address})
+        await updateUser(id, {name, email, phone, imageUrl, address})
         .then(()=> navigate('/allUsers'))
         .catch(err => console.log(err));
         setLoading(false)
