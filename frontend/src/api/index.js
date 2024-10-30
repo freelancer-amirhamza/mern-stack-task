@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const API = axios.create({
-    baseURL: "https://mern-stack-task-backend-b1gz.onrender.com",
+    baseURL: "http://localhost:4000",
 })
 
 // get All users
