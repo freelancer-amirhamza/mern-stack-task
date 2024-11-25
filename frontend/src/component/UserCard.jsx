@@ -33,7 +33,7 @@ const UserCard = ({user, setUsers}) => {
               
                 <h1 className="flex gap-1 text-[1rem] w-full">Phone: <span>{phone} </span></h1>
                 
-                <h1 className="flex gap-1 text-[1rem] w-full">Address: <span> {address}</span></h1>
+                <h1 className="flex gap-1 text-[1rem] truncate w-full">Address: <span> {address}</span></h1>
                 
               </div>
               <div className="flex items-center justify-between w-full p-3">

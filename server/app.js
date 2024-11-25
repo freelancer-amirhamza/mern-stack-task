@@ -14,13 +14,14 @@ app.use(express.json());
 // get users
 app.get("/",async (req, res)=>{
     try {
-        await Users.find()
+        await Users.find()    
         .then((users)=> res.json(users))
         .catch((err)=> res.json(err));
     } catch (error) {
         console.log(error)
     }
 })
+
 
 // create users
 app.post("/createUser", async (req, res)=>{

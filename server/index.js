@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 4000;
 
 const host = 'localhost';
 
-// const host = '127.0.0.1';
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://${host}:${PORT}`);

@@ -15,6 +15,7 @@ const App = () => {
       useEffect(()=>{
           getAllUsers()
       },[users])
+      console.log(users)
   return (
     <>
     <Router>
